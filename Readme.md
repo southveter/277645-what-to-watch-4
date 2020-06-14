@@ -1,7 +1,7 @@
 # Личный проект «Что посмотреть» [![Build status][travis-image]][travis-url]
 
-* Студент: [Владимир Ветров](https://up.htmlacademy.ru/react/4/user/277645).
-* Наставник: `Неизвестно`.
+* Студент:  [Владимир Ветров](https://up.htmlacademy.ru/react/4/user/277645).
+* Наставник:  [Евгений Щеколдин](https://htmlacademy.ru/profile/id861059).
 
 ---
 
