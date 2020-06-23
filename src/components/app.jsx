@@ -3,7 +3,11 @@ import {MainScreen} from './main.jsx';
 
 export const App = (props) => {
   // eslint-disable-next-line react/prop-types
-  const {movieName, genre, movieYear} = props;
+  const {filmName, genre, movieYear, movieNames} = props;
 
-  return <MainScreen movieName={movieName} genre={genre} movieYear={movieYear}/>;
+  return <MainScreen
+    filmName={filmName}
+    genre={genre}
+    movieYear={movieYear}
+    movieNames={movieNames}/>;
 };

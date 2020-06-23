@@ -8,11 +8,14 @@ const Settings = {
   MOVIE_YEAR: 2014
 };
 
+const mockMovieNames = [`Fantastic Beasts`, `Bohemian Rhapsody`, `Macbeth`];
+
 ReactDOM.render(
     <App
-      movieName={Settings.MOVIE_NAME}
+      filmName={Settings.MOVIE_NAME}
       genre={Settings.GENRE}
       movieYear={Settings.MOVIE_YEAR}
+      movieNames = {mockMovieNames}
     />,
     document.querySelector(`#root`)
 );
