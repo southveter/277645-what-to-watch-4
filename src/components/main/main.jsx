@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 export const MainScreen = (props) => {
-  const {filmName, genre, movieYear, movieNames} = props;
+  const {filmName, genre, movieYear, movieNames, onMovieTitleClick} = props;
   const playS = {[`xlinkHref`]: `play-s`};
   const add = {[`xlinkHref`]: `add`};
 
@@ -107,7 +107,7 @@ export const MainScreen = (props) => {
                   <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt="Fantastic Beasts: The Crimes of Grindelwald" width="280" height="175" />
                 </div>
                 <h3 className="small-movie-card__title">
-                  <a className="small-movie-card__link" href="movie-page.html">{it}</a>
+                  <a onClick={onMovieTitleClick} className="small-movie-card__link" href="movie-page.html">{it}</a>
                 </h3>
               </article>)}
           </div>
@@ -140,4 +140,5 @@ MainScreen.propTypes = {
   genre: PropTypes.string.isRequired,
   movieYear: PropTypes.number.isRequired,
   movieNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onMovieTitleClick: PropTypes.func.isRequired
 };
