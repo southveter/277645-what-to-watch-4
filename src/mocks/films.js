@@ -1,13 +1,4 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import {App} from './app.jsx';
-
-const filmName = `The Grand Budapest Hotel`;
-const genre = `Drama`;
-const movieYear = 2014;
-// const movieNames = [`Fantastic Beasts`, `Bohemian Rhapsody`, `Macbeth`];
-
-const filmsList = [
+export const filmsList = [
   {
     src: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`,
     title: `Fantastic Beasts: The Crimes of Grindelwald`,
@@ -41,19 +32,3 @@ const filmsList = [
     title: `Johnny English`,
   },
 ];
-
-describe(`Render App`, () => {
-
-  it(`<App />`, () => {
-    const tree = renderer
-      .create(<App
-        filmName={filmName}
-        genre={genre}
-        movieYear={movieYear}
-        filmsList={filmsList}
-      />)
-      .toJSON();
-
-    expect(tree).toMatchSnapshot();
-  });
-});

@@ -6,19 +6,23 @@ const titleClickHandler = () => {};
 
 export const App = (props) => {
 
-  const {filmName, genre, movieYear, movieNames} = props;
+  const {filmName, genre, movieYear, filmsList} = props;
 
   return <MainScreen
     filmName={filmName}
     genre={genre}
     movieYear={movieYear}
-    movieNames={movieNames}
+    filmsList = {filmsList}
     onMovieTitleClick={titleClickHandler}/>;
 };
+
 
 App.propTypes = {
   filmName: PropTypes.string.isRequired,
   genre: PropTypes.string.isRequired,
   movieYear: PropTypes.number.isRequired,
-  movieNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+  filmsList: PropTypes.arrayOf(PropTypes.shape({
+    src: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  })).isRequired,
 };
