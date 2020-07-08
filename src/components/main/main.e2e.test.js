@@ -1,67 +1,74 @@
 import React from "react";
 import Enzyme, {mount} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import {MainScreen} from './main.jsx';
+import {Main} from './main.jsx';
 
 Enzyme.configure({
   adapter: new Adapter(),
 });
 
-const filmName = `The Grand Budapest Hotel`;
-const genre = `Drama`;
-const movieYear = 2014;
-const filmsList = [
-  {
-    src: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`,
-    title: `Fantastic Beasts: The Crimes of Grindelwald`,
+const mocks = {
+  featuredMovie: {
+    title: `The Grand Budapest Hotel`,
+    genre: `Drama`,
+    releaseDate: 2014,
   },
-  {
-    src: `img/bohemian-rhapsody.jpg`,
-    title: `Bohemian Rhapsody`,
-  },
-  {
-    src: `img/macbeth.jpg`,
-    title: `Macbeth`,
-  },
-  {
-    src: `img/aviator.jpg`,
-    title: `Aviator`,
-  },
-  {
-    src: `img/we-need-to-talk-about-kevin.jpg`,
-    title: `We need to talk about Kevin`,
-  },
-  {
-    src: `img/what-we-do-in-the-shadows.jpg`,
-    title: `What We Do in the Shadows`,
-  },
-  {
-    src: `img/revenant.jpg`,
-    title: `Revenant`,
-  },
-  {
-    src: `img/johnny-english.jpg`,
-    title: `Johnny English`,
-  },
-];
-const onMovieTitleClick = jest.fn();
+  moviesList: [
+    {
+      title: `Fantastic Beasts: The Crimes of Grindelwald`,
+      poster: `img/fantastic-beasts-the-crimes-of-grindelwald.jpg`,
+      source: `video/preview.webm`,
+    },
+    {
+      title: `Pulp Fiction`,
+      poster: `img/pulp-fiction.jpg`,
+      source: `video/preview.webm`,
+    },
+    {
+      title: `Shutter Island`,
+      poster: `img/shutter-island.jpg`,
+      source: `video/preview.webm`,
+    },
+    {
+      title: `Macbeth`,
+      poster: `img/macbeth.jpg`,
+      source: `video/preview.webm`,
+    },
+    {
+      title: `Snatch`,
+      poster: `img/snatch.jpg`,
+      source: `video/preview.webm`,
+    },
+    {
+      title: `We need to talk about Kevin`,
+      poster: `img/we-need-to-talk-about-kevin.jpg`,
+      source: `video/preview.webm`,
+    },
+    {
+      title: `Bohemian Rhapsody`,
+      poster: `img/bohemian-rhapsody.jpg`,
+      source: `video/preview.webm`,
+    },
+    {
+      title: `Revenant`,
+      poster: `img/revenant.jpg`,
+      source: `video/preview.webm`,
+    },
+  ],
+};
+const {featuredMovie, moviesList} = mocks;
+const onMovieClick = () => {};
 
 it(`Should movie title link be pressed`, () => {
-  const mainScreen = mount(
-      <MainScreen
-        filmName={filmName}
-        genre={genre}
-        movieYear={movieYear}
-        filmsList={filmsList}
-        onMovieTitleClick={onMovieTitleClick}
+  const main = mount(
+      <Main
+        featuredMovie={featuredMovie}
+        moviesList={moviesList}
+        onMovieClick={onMovieClick}
       />
   );
 
-  const titleLink = mainScreen.find(`a.small-movie-card__link`);
+  const movieCards = main.find(`article.small-movie-card`).length;
 
-  titleLink.forEach((title) => {
-    title.simulate(`click`);
-  });
-
-  expect(onMovieTitleClick.mock.calls.length).toBe(filmsList.length);
+  expect(movieCards).toBe(moviesList.length);
 });

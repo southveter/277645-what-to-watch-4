@@ -1,14 +1,10 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import {Main} from './main.jsx';
-
-const mocks = {
-  featuredMovie: {
+export default {
+  featured: {
     title: `The Grand Budapest Hotel`,
     genre: `Drama`,
     releaseDate: 2014,
   },
-  moviesList: [
+  list: [
     {
       title: `Macbeth`,
       genre: `Drama`,
@@ -141,19 +137,3 @@ const mocks = {
     },
   ],
 };
-const {featuredMovie, moviesList} = mocks;
-const onMovieClick = () => {};
-
-it(`Should render correctly`, () => {
-  const tree = renderer
-    .create(
-        <Main
-          featuredMovie={featuredMovie}
-          moviesList={moviesList}
-          onMovieClick={onMovieClick}
-        />
-    )
-    .toJSON();
-
-  expect(tree).toMatchSnapshot();
-});
