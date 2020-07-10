@@ -21,6 +21,7 @@ export default {
       and takes the throne for himself.`,
       director: `Justin Kurzel`,
       cast: `Michael Fassbender, Marion Cotillard, Jack Madigan`,
+      preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     },
     {
       title: `We need to talk about Kevin`,
@@ -38,6 +39,7 @@ export default {
       anything anyone imagined.`,
       director: `Lynne Ramsay`,
       cast: `Tilda Swinton, John C. Reilly, Ezra Miller`,
+      preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     },
     {
       title: `Fantastic Beasts: The Crimes of Grindelwald`,
@@ -54,6 +56,7 @@ export default {
       of Magizoologist Newt Scamander.`,
       director: `David Yates`,
       cast: `Eddie Redmayne, Katherine Waterston, Dan Fogler`,
+      preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     },
     {
       title: `Shutter Island`,
@@ -70,6 +73,7 @@ export default {
       for the criminally insane.`,
       director: `Martin Scorsese`,
       cast: `Leonardo DiCaprio, Emily Mortimer, Mark Ruffalo`,
+      preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     },
     {
       title: `Snatch`,
@@ -86,6 +90,7 @@ export default {
       and supposedly Jewish jewelers fight to track down a priceless stolen diamond.`,
       director: `Guy Ritchie`,
       cast: `Jason Statham, Brad Pitt, Benicio Del Toro`,
+      preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     },
     {
       title: `Pulp Fiction`,
@@ -102,6 +107,7 @@ export default {
       intertwine in four tales of violence and redemption.`,
       director: `Quentin Tarantino`,
       cast: `John Travolta, Uma Thurman, Samuel L. Jackson`,
+      preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     },
     {
       title: `Revenant`,
@@ -118,6 +124,7 @@ export default {
       mauled by a bear and left for dead by members of his own hunting team.`,
       director: `Alejandro G. Iñárritu`,
       cast: `Leonardo DiCaprio, Tom Hardy, Will Poulter`,
+      preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     },
     {
       title: `Bohemian Rhapsody`,
@@ -134,6 +141,7 @@ export default {
       leading up to their famous performance at Live Aid (1985).`,
       director: `Bryan Singer`,
       cast: `Rami Malek, Lucy Boynton, Gwilym Lee`,
+      preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
     },
   ],
 };
